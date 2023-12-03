@@ -1,1 +1,1 @@
-console.log("Hello via Bun!");
+console.log("To launch the resolve of a day, go inside the folder and type the command : bun run resolve.ts. The input.txt has to be in the same folder.");
