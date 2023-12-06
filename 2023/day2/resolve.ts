@@ -1,5 +1,9 @@
-const file = Bun.file(import.meta.dir + '/input.txt'); // BunFile
-const lines = (await file.text()).split("\n");
+import fs from "fs";
+
+const content = await fs.promises.readFile("./input.txt", {
+  encoding: "utf-8",
+});
+const lines = content.split("\n");
 
 function part1() {
     const ballsAvailable: Record<string, number> = {

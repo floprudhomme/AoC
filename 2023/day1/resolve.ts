@@ -1,5 +1,8 @@
-const file = Bun.file(import.meta.dir + '/input.txt'); // BunFile
-const content = await file.text();
+import fs from "fs";
+
+const content = await fs.promises.readFile("./input.txt", {
+  encoding: "utf-8",
+});
 
 function part1() {
     let lines = content.split("\n");
