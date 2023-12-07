@@ -80,7 +80,7 @@ function parseFile() {
             currentMap = "humidity";
         } else if (line.indexOf("-to-location") >= 0) {
             currentMap = "location";
-        } else if(line.length === 0) {
+        } else if(line.length <= 1) {
           continue;
         } else {
             let values = line.split(" ");
@@ -95,7 +95,7 @@ function parseFile() {
 }
 
 function part1() {
-    parseFile("part1");
+    parseFile();
 
     function getNumberFor(key: keyof Seed, oldKey: keyof Seed, currentSeed: Seed): number {
         let currentValue: number = currentSeed[oldKey];
